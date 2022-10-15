@@ -15,7 +15,8 @@ SCSS 적용
 │   ├── font
 │   └── images
 ├── src
-│   ├── component
+│   ├── store // store 저장소 ($store로 접근)
+│   ├── lib // ($lib로 접근)
 │   │   ├── 프로그램명 //특정 프로그램용 요소
 │   │   └── ui //UI 공통요소 (button, card, 등)
 │   └── routes

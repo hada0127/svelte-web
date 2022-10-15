@@ -1,13 +1,18 @@
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import routify from '@roxi/routify/vite-plugin'
 import { defineConfig } from 'vite'
 import { mdsvex } from 'mdsvex'
+import routify from '@roxi/routify/vite-plugin'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess'
-
 
 const production = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      $lib: path.resolve('./src/lib'),
+      $store: path.resolve('./src/store')
+    }
+  },    
     clearScreen: false,
 
     plugins: [
