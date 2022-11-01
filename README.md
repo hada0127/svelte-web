@@ -9,7 +9,7 @@ SCSS 적용
 ```bash
 ├── dist
 │   └── client //빌드 파일
-├── asset
+├── public
 │   ├── css
 │   ├── favicon
 │   ├── font
