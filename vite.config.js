@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import { mdsvex } from 'mdsvex'
+import path from 'path'
 import routify from '@roxi/routify/vite-plugin'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess'
