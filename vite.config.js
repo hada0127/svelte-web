@@ -10,29 +10,28 @@ const production = process.env.NODE_ENV === 'production'
 export default defineConfig({
   resolve: {
     alias: {
-      $lib: path.resolve('./src/lib'),
-      $store: path.resolve('./src/store')
+      '$lib/': `${path.resolve(__dirname, 'src')}/lib/`,
+      '$store/': `${path.resolve(__dirname, 'src')}/store/`
     }
-  },    
-    clearScreen: false,
+  },
+clearScreen: false,
 
-    plugins: [
-        routify({
-            devHelper: !production,
-        }),
-        svelte({
-            emitCss: false,
-            compilerOptions: {
-                dev: !production,
-            },
-            extensions: ['.md', '.svelte'],
-            preprocess: [mdsvex({ extension: 'md' }), sveltePreprocess({
-                scss: {
-                  prependData: '@import "./src/asset/css/global.scss";'
-                }
-              })],
-        }),
-    ],
+plugins: [
+    routify({
+        devHelper: false,
+    }),
+    svelte({
+        emitCss: false,
+        compilerOptions: {
+            dev: !production,
+        },
+        extensions: ['.md', '.svelte'],
+        preprocess: [mdsvex({ extension: 'md' }), sveltePreprocess()],
+    }),
+],
 
-    server: { port: 3000 },
+optimizeDeps: {
+  include: ["highlight.js", "highlight.js/lib/core"],
+},
+server: { port: 3000 },
 })
