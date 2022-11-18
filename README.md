@@ -15,15 +15,14 @@ SCSS 적용
 │   ├── font
 │   └── images
 ├── src
-│   ├── store // store 저장소 ($store로 접근)
-│   ├── lib // ($lib로 접근)
-│   │   ├── 프로그램명 //특정 프로그램용 요소
-│   │   └── ui //UI 공통요소 (button, card, 등)
+│   ├── store // store 저장소 (@store로 접근)
+│   ├── components // (@components로 접근, Atomic Design Pattern 간략화)
+│   │   ├── atoms
+│   │   ├── modules
+│   │   └── templates
 │   └── routes
 │       ├── sample
-│       │   ├── ignore.svelte //상위 모듈 무시 샘플
 │       │   └── index.svelte //각 폴더 내 시작파일
-│       ├── _module.svelte //해당 폴더 및 하위 폴더 전체 적용 레이아웃
 │       └── index.svelte //각 폴더 내 시작파일
 └── index.html //기본 html 구조
 ``` 

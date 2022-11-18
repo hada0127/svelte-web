@@ -1,2 +1,0 @@
-<div>module</div>
-<slot />
