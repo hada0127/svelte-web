@@ -1,31 +1,32 @@
-# Svelte + Routify3 Boilerplate
+# Sveltekit SPA Boilerplate
 Web FrontEnd 용 Boilerplate
-Sveltekit (ts, eslint, prettier, playweight, vitest)   
-reset.css 기본적용   
-eslint, vscode 설정 적용   
-SCSS 적용
-
+Sveltekit (ts, eslint, prettier, playwright, vitest)   
+Reset css 기본적용   
+   
 ### 주요 디렉토리 구조
 ```bash
-├── .svelte-kit
-│   └── output
-│   │   └── client //빌드 파일
+├── build //빌드 파일
 ├── static
 │   ├── css
+│   │   └── reset.css //Reset css
 │   ├── favicon
 │   ├── font
-│   └── images
+│   └── assets
 ├── src
-│   ├── store // store 저장소 (@store로 접근)
-│   ├── components // (@components로 접근, Atomic Design Pattern 간략화)
-│   │   ├── atoms
-│   │   ├── modules
-│   │   └── templates
+│   ├── lib //$lib로 접근
+│   │   ├── scss // scss ($scss로 접근)
+│   │   │   └── variable.scss //Scss 변수
+│   │   ├── store // store 저장소 ($store로 접근)
+│   │   └── components // 컴포넌트 ($components로 접근, Atomic Design Pattern 간략화)
+│   │       ├── atoms
+│   │       ├── modules
+│   │       └── templates
 │   └── routes
-│       ├── sample
-│       │   └── +page.svelte //각 폴더 내 시작파일
+│       ├── [...404]
+│       │   └── +page.svelte //404 오류 페이지
 │       └── +page.svelte //각 폴더 내 시작파일
-└── app.html //기본 html 구조
+├── app.html //기본 html 구조
+└── 200.html //기본 html 구조 (200 fallback)
 ``` 
 
 ## 설치
@@ -60,7 +61,8 @@ server {
 ## 초기설정(참고)
 ```
 npm i -g yarn
-npm i -g eslint
+yarn global add eslint
+yarn global add typescript
 npm create svelte@latest
 ```
 Where should we create your project?   
@@ -73,6 +75,6 @@ Where should we create your project?
 ✔ Add Vitest for unit testing? **Yes**   
 ```
 yarn
-npm i axios
-npm i -D svelte-preprocess sass
+yarn add axios
+yarn add -D sass
 ```
