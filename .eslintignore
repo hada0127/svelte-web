@@ -1,6 +1,0 @@
-.eslintrc.cjs
-.routify/
-.vscode/
-public/
-dist/
-node_modules/
