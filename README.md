@@ -1,5 +1,5 @@
-# Sveltekit SPA Boilerplate
-Web FrontEnd 용 Boilerplate
+# Svelte SPA Boilerplate
+Web FrontEnd 용 Boilerplate   
 Sveltekit (ts, eslint, prettier, playwright, vitest)   
 Reset css 기본적용   
    
@@ -66,7 +66,7 @@ yarn global add typescript
 npm create svelte@latest
 ```
 Where should we create your project?   
-  (leave blank to use current directory) …   
+  (leave blank to use current directory)    
 ✔ Which Svelte app template? › **Skeleton project**   
 ✔ Add type checking with TypeScript? › **Yes, using TypeScript syntax**   
 ✔ Add ESLint for code linting? **Yes**   
