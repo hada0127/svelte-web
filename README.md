@@ -25,8 +25,7 @@ Reset css 기본적용
 │       ├── [...404]
 │       │   └── +page.svelte //404 오류 페이지
 │       └── +page.svelte //각 폴더 내 시작파일
-├── app.html //기본 html 구조
-└── 200.html //기본 html 구조 (200 fallback)
+└── app.html //기본 html 구조
 ``` 
 
 ## 설치
